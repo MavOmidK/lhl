@@ -1,0 +1,87 @@
+// IMPORTANT
+// ****** Site Colors ******
+// Primary: #4A4A4A
+// Secondary: #313131
+// Tertiary: #C5CDD5
+
+
+.site-header {
+  display: flex;
+  flex-direction: row;
+  padding: 24px 34px;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-left {
+    display: flex;
+    // TODO: Place as $gap-large into abstracts/_variables.scss
+    gap: 16px;
+    align-items: center;
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 100px;
+    }
+
+    .header-pages {
+      display: flex;
+      // TODO: Place as $gap into abstracts/_variables.scss
+      gap: 8px;
+
+      // TODO: Place as $link-style into components/_link.scss
+      .link {
+        height: fit-content;
+        width: fit-content;
+        padding: 8px 12px;
+        // TODO: Place as $border-radius into abstracts/_variables.scss
+        border-radius: 8px;
+      }
+
+      // TODO: Place as $link-current-style into components/_link.scss
+      .link-current {
+
+      }
+
+      // TODO: Place as $hover-link-style into components/_link.scss
+      .link:hover {
+        // TODO: Set as $hover-transition into abstracts/_variables.scss
+        transition: 200ms ease-in-out;
+        // TODO: Place as $color-light-gray into abstracts/_colors.scss
+        background: none;
+        cursor: pointer;
+        // TODO: Create default font color
+        color: black;
+      }
+    }
+  }
+
+  .header-right {
+    display: flex;
+
+    // TODO: Place as $badge-style into components/_badge.scss
+    .abbreviated-name {
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // TODO: Place as $color-light-gray into abstracts/_colors.scss
+      background: #f0f3f5;
+      border-radius: 100px;
+      cursor: default;
+      user-select: none;
+
+      span {
+        // TODO: Place as $text-small into base/_base.scss
+        font-size: 12px;
+      }
+    }
+
+    // TODO: Set as $hover-badge-style into components/_badge.scss
+    .abbreviated-name:hover {
+      // TODO: Set as $hover-transition into abstracts/_variables.scss
+      transition: 200ms ease-in-out;
+      box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;    }
+  }
+}

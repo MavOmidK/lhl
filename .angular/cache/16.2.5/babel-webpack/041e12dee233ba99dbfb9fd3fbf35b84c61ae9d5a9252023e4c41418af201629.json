@@ -1,0 +1,1 @@
+{"ast":null,"code":"export * from './lib/team.service';","map":{"version":3,"names":[],"sources":["/Users/omidkhataee/LHL/monorepo/lhl/libs/client/data-access/src/index.ts"],"sourcesContent":["export * from './lib/team.service';\n"],"mappings":"AAAA,cAAc,oBAAoB"},"metadata":{},"sourceType":"module","externalDependencies":[]}
