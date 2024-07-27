@@ -1,5 +1,4 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import { TeamService } from '@lhl/client/data-access';
 
 @Component({
   selector: 'lhl-feature-dashboard',
@@ -8,9 +7,7 @@ import { TeamService } from '@lhl/client/data-access';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeatureDashboardComponent {
-  teams$ = this.teamService.getAllTeams();
-
-  constructor(private teamService: TeamService) {}
+  constructor() {}
 
   // TODO: Put this into a smart container
   get teamName(): string {

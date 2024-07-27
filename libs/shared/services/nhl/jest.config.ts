@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'shared-client-data-access',
-  preset: '../../../jest.preset.js',
+  displayName: 'shared-service-nhl',
+  preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../../coverage/shared/client/data-access',
+  coverageDirectory: '../../../../coverage/libs/shared/services/nhl',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

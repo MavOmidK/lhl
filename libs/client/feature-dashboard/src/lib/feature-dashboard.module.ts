@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {TeamService} from '@lhl/client/data-access';
 import {FeatureDashboardComponent} from './feature-dashboard/feature-dashboard.component';
 import {featureDashboardRoutes} from './lib.routes';
 import {RouterModule} from '@angular/router';
+import { FeatureSearchModule } from '@lhl/client/feature-search';
 
 @NgModule({
   declarations: [
@@ -11,11 +11,10 @@ import {RouterModule} from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(featureDashboardRoutes)
+    RouterModule.forChild(featureDashboardRoutes),
+    FeatureSearchModule
   ],
-  providers: [
-    TeamService
-  ],
+  providers: [],
   exports: [FeatureDashboardComponent]
 })
 export class FeatureDashboardModule {}

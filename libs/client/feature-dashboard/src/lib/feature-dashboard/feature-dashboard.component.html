@@ -1,17 +1,8 @@
 <div class="page dashboard-page">
-
   <h1>Little Hockey League</h1>
 
-  <table>
-    <tr>
-      <th>Team</th>
-      <th>Manager</th>
-      <th>Players</th>
-    </tr>
-    <tr *ngFor="let team of teams$ | async">
-      <td>{{teamName}}</td>
-      <td>{{teamManager}}</td>
-      <td>{{numOfPlayers}}</td>
-    </tr>
-  </table>
+  <div>
+    <h2>Test Search Component</h2>
+    <lhl-feature-search></lhl-feature-search>
+  </div>
 </div>

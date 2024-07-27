@@ -20,11 +20,13 @@
         "libs/client/feature-dashboard/src/index.ts"
       ],
       "@lhl/client/feature-header": ["libs/client/feature-header/src/index.ts"],
+      "@lhl/client/feature-search": ["libs/client/feature-search/src/index.ts"],
       "@lhl/server/feature-manager": [
         "libs/server/feature-manager/src/index.ts"
       ],
       "@lhl/server/feature-player": ["libs/server/feature-player/src/index.ts"],
       "@lhl/server/feature-team": ["libs/server/feature-team/src/index.ts"],
+      "@lhl/shared-services-nhl": ["libs/shared/services/nhl/src/index.ts"],
       "@lhl/shared/domain": ["./libs/shared/domain/src/index.ts"],
       "@lhl/styles": ["libs/shared/src/index.ts"]
     }

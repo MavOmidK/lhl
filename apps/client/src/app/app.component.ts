@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ClarityModule } from '@clr/angular';
 import {FeatureHeaderModule} from '@lhl/client/feature-header';
 
 
 @Component({
   standalone: true,
-  imports: [RouterModule, FeatureHeaderModule],
+  imports: [RouterModule, FeatureHeaderModule, ClarityModule],
   selector: 'lhl-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
