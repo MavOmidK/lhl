@@ -1,4 +1,6 @@
 export interface SearchPlayerResponse {
-    playerId: number;
+    playerId: string;
     name: string;
+    lastTeamAbbrev: string;
+    positionCode: string;
 }

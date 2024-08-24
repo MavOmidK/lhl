@@ -1,0 +1,16 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th *ngFor="let header of headers">{{header}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let manager of managers">
+            <td>{{manager.name}}</td>
+            <td *ngIf="manager.teamId">{{manager.teamId | teamName | async}}</td>
+            <td *ngIf="!manager.teamId">N/A</td>
+            <td>{{manager.email}}</td>
+            <td>{{manager.admin}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="header-left">
+    <img [src]="logoImg" class="logo" alt="logo" />
+    <div class="header-pages">
+      <a class="link" *ngFor="let page of pages" [ngClass]="linkStyle(page.id)" (click)="onClickPage(page)">{{page.name}}</a>
+    </div>
+  </div>
+  <div class="header-right">
+   
+  </div>
+</header>
+
+

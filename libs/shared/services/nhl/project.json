@@ -3,7 +3,7 @@
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/services/nhl/src",
   "prefix": "lhl",
-  "tags": ["type: shared-service", "scope: client"],
+  "tags": ["type: shared-service", "scope: lhl"],
   "projectType": "library",
   "targets": {
     "build": {

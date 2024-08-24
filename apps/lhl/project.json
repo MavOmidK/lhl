@@ -1,0 +1,111 @@
+{
+  "name": "lhl",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "lhl",
+  "sourceRoot": "apps/lhl/src",
+  "tags": ["type:app", "scope:lhl"],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/lhl",
+        "index": "apps/lhl/src/index.html",
+        "main": "apps/lhl/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/lhl/tsconfig.app.json",
+        "assets": [
+          "apps/lhl/src/favicon.ico",
+          "apps/lhl/src/assets",
+          {
+            "input": "libs/shared/domain/src/lib/assets",
+            "glob": "**.*",
+            "output": "assets"
+          }
+        ],
+        "styles": [
+          "apps/lhl/src/styles.scss",
+          "node_modules/@cds/core/global.min.css",
+          "node_modules/@cds/core/styles/theme.dark.min.css",
+          "node_modules/@clr/ui/clr-ui.min.css"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "lhl:build:production"
+        },
+        "development": {
+          "browserTarget": "lhl:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/lhl/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "lhl:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/lhl/**/*.ts", "apps/lhl/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/lhl/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "lhl:build"
+      }
+    }
+  }
+}

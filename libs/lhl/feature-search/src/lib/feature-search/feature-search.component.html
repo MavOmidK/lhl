@@ -1,0 +1,7 @@
+<h2>Search Players</h2>
+<div class="flex-column">
+    <input clrInput placeholder="My input" name="input" [(ngModel)]="searchName" (keydown)="onKeyDownPlayerSearch($event)"/>
+    <div class="players-searched">
+        <lhl-player-card *ngFor="let player of players" [player]="player"></lhl-player-card>
+    </div>
+</div>

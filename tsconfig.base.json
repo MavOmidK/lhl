@@ -15,12 +15,22 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@lhl/client/data-access": ["libs/client/data-access/src/index.ts"],
-      "@lhl/client/feature-dashboard": [
-        "libs/client/feature-dashboard/src/index.ts"
+      "@lhl/data-access": ["libs/lhl/data-access/src/index.ts"],
+      "@lhl/feature-dashboard": ["libs/lhl/feature-dashboard/src/index.ts"],
+      "@lhl/feature-header": ["libs/lhl/feature-header/src/index.ts"],
+      "@lhl/feature-player-card": ["libs/lhl/feature-player-card/src/index.ts"],
+      "@lhl/feature-search": ["libs/lhl/feature-search/src/index.ts"],
+      "@lhl/manager/data-access": ["libs/lhl/manager/data-access/src/index.ts"],
+      "@lhl/manager/feature-create": [
+        "libs/lhl/manager/feature-create/src/index.ts"
       ],
-      "@lhl/client/feature-header": ["libs/client/feature-header/src/index.ts"],
-      "@lhl/client/feature-search": ["libs/client/feature-search/src/index.ts"],
+      "@lhl/manager/feature-page": [
+        "libs/lhl/manager/feature-page/src/index.ts"
+      ],
+      "@lhl/manager/feature-view": [
+        "libs/lhl/manager/feature-view/src/index.ts"
+      ],
+      "@lhl/manager/ui": ["libs/lhl/manager/ui/src/index.ts"],
       "@lhl/server/feature-manager": [
         "libs/server/feature-manager/src/index.ts"
       ],
@@ -28,7 +38,10 @@
       "@lhl/server/feature-team": ["libs/server/feature-team/src/index.ts"],
       "@lhl/shared-services-nhl": ["libs/shared/services/nhl/src/index.ts"],
       "@lhl/shared/domain": ["./libs/shared/domain/src/index.ts"],
-      "@lhl/styles": ["libs/shared/src/index.ts"]
+      "@lhl/shared/utils/pipe": ["libs/shared/utils/pipe/src/index.ts"],
+      "@lhl/styles": ["libs/shared/src/index.ts"],
+      "@lhl/team/data-access": ["libs/lhl/team/data-access/src/index.ts"],
+      "@lhl/team/ui": ["libs/lhl/team/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,30 @@
+<button class="btn btn-outline" (click)="onClickPlusIcon()">
+    <i class="fa-regular fa-plus"></i>
+</button>
+
+<clr-modal #createManagerModal [(clrModalOpen)]="opened" [clrModalSize]="size">
+    <div class="modal-title">Add a Manager</div>
+    <div class="modal-body">
+        <form clrForm>
+            <clr-input-container>
+                <label>Name</label>
+                <input clrInput type="text" [(ngModel)]="name" required name="name"/>
+            </clr-input-container>
+            <clr-input-container>
+                <label>Email</label>
+                <input clrInput type="email" [(ngModel)]="email" required name="email" />
+            </clr-input-container>
+            <clr-select-container>
+                <label>Team</label>
+                <div *ngIf="teamsWarning">No available teams</div>
+                <select clrSelect [(ngModel)]="teamId" name="team">
+                    <option *ngFor="let availableTeam of availableTeams" [value]="availableTeam.id">{{availableTeam.name}}</option>
+                </select>
+            </clr-select-container>
+          </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline" (click)="onClickCancel()">Cancel</button>
+        <button type="button" type="submit" class="btn btn-primary" (click)="onClickCreate()">Create</button>
+     </div>
+</clr-modal>
