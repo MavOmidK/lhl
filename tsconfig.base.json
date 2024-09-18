@@ -15,11 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@lhl/data-access": ["libs/lhl/data-access/src/index.ts"],
-      "@lhl/feature-dashboard": ["libs/lhl/feature-dashboard/src/index.ts"],
       "@lhl/feature-header": ["libs/lhl/feature-header/src/index.ts"],
-      "@lhl/feature-player-card": ["libs/lhl/feature-player-card/src/index.ts"],
-      "@lhl/feature-search": ["libs/lhl/feature-search/src/index.ts"],
       "@lhl/manager/data-access": ["libs/lhl/manager/data-access/src/index.ts"],
       "@lhl/manager/feature-create": [
         "libs/lhl/manager/feature-create/src/index.ts"
@@ -31,6 +27,11 @@
         "libs/lhl/manager/feature-view/src/index.ts"
       ],
       "@lhl/manager/ui": ["libs/lhl/manager/ui/src/index.ts"],
+      "@lhl/player/data-access": ["libs/lhl/player/data-access/src/index.ts"],
+      "@lhl/player/feature-search": [
+        "libs/lhl/player/feature-search/src/index.ts"
+      ],
+      "@lhl/player/ui": ["libs/lhl/player/ui/src/index.ts"],
       "@lhl/server/feature-manager": [
         "libs/server/feature-manager/src/index.ts"
       ],
