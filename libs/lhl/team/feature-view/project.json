@@ -1,0 +1,51 @@
+{
+  "name": "team-feature-view",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lhl/team/feature-view/src",
+  "prefix": "lhl",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/lhl/team/feature-view/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/lhl/team/feature-view/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/lhl/team/feature-view/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/lhl/team/feature-view/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/lhl/team/feature-view/**/*.ts",
+          "libs/lhl/team/feature-view/**/*.html",
+          "libs/lhl/team/feature-view/package.json"
+        ]
+      }
+    }
+  }
+}

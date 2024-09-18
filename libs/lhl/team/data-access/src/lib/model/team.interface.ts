@@ -5,5 +5,7 @@ export interface ITeam {
   // Team name
   name: string;
   // ID of players owned
-  players: Array<string>
+  activeRoster?: Array<string>;
+  // ID of players owned
+  prospectRoster?: Array<string>;
 }

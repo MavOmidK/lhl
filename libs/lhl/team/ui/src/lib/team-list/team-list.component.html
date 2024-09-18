@@ -1,0 +1,31 @@
+<table class="table">
+  <thead>
+      <tr>
+          <th *ngFor="let header of headers">{{header}}</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let team of teams" class="team-row" (click)="onClickTeam(team)">
+        <td>
+          <span>{{team.name}}</span>
+        </td>
+        <td *ngIf="team.managerId">
+          <span>{{team.managerId | managerName | async}}</span>
+        </td>
+        <td *ngIf="!team.managerId">
+          <span>Not assigned</span>
+        </td>
+        <td>
+          <span>{{players(team)}}</span>
+        </td>
+        <td>
+          <span>{{prospects(team)}}</span>
+        </td>
+        <td>
+          <button type="button" class="btn btn-icon" (click)="onClickEditTeam(team)">
+            <i [class]="editIcon"></i>
+          </button>
+        </td>
+      </tr>
+  </tbody>
+</table>

@@ -18,4 +18,8 @@ export class TeamService {
     public getTeams(): Observable<Array<Team>> {
         return this.http.get<Array<Team>>(this.teamUrl);
     }
+
+    public createTeam(team: Team): Observable<Team> {
+        return this.http.post<Team>(this.teamUrl, team);
+    }
 }

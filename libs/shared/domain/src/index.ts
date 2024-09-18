@@ -5,3 +5,6 @@ export * from './lib/models/interfaces/team.interface';
 
 // Classes
 export * from './lib/models/classes/player';
+
+// Enums
+export * from './lib/models/enums/icons';

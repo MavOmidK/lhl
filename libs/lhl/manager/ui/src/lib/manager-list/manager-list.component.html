@@ -6,11 +6,21 @@
     </thead>
     <tbody>
         <tr *ngFor="let manager of managers">
-            <td>{{manager.name}}</td>
-            <td *ngIf="manager.teamId">{{manager.teamId | teamName | async}}</td>
-            <td *ngIf="!manager.teamId">N/A</td>
-            <td>{{manager.email}}</td>
-            <td>{{manager.admin}}</td>
+            <td>
+                <span>{{manager.name}}</span>
+            </td>
+            <td *ngIf="manager.teamId">
+                <span>{{manager.teamId | teamName | async}}</span>
+            </td>
+            <td *ngIf="!manager.teamId">
+                <span>N/A</span>
+            </td>
+            <td>
+                <span>{{manager.email}}</span>
+            </td>
+            <td>
+                <span>{{manager.admin}}</span>
+            </td>
         </tr>
     </tbody>
 </table>

@@ -41,6 +41,9 @@
       "@lhl/shared/utils/pipe": ["libs/shared/utils/pipe/src/index.ts"],
       "@lhl/styles": ["libs/shared/src/index.ts"],
       "@lhl/team/data-access": ["libs/lhl/team/data-access/src/index.ts"],
+      "@lhl/team/feature-create": ["libs/lhl/team/feature-create/src/index.ts"],
+      "@lhl/team/feature-page": ["libs/lhl/team/feature-page/src/index.ts"],
+      "@lhl/team/feature-view": ["libs/lhl/team/feature-view/src/index.ts"],
       "@lhl/team/ui": ["libs/lhl/team/ui/src/index.ts"]
     }
   },
